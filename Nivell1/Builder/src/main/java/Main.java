@@ -9,6 +9,10 @@ public class Main {
 
         Pizza margarita = builder.getPizzaDone();
 
+        cheff.builderPepperoni(builder);
+
+        Pizza pepperoni = builder.getPizzaDone();
+
 
     }
 }

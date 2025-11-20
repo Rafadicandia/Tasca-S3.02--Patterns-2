@@ -6,10 +6,12 @@ public class Builder implements PizzaBuilder {
     private DoughType dough;
     private Ingredients toppings;
 
+
     @Override
     public void setName(String name) {
         this.name = name;
     }
+
     @Override
     public void setSize(double size) {
         this.size = size;
@@ -29,7 +31,7 @@ public class Builder implements PizzaBuilder {
 
     @Override
     public Pizza getPizzaDone() {
-        System.out.println("Your Pizza is ready!"
+        System.out.println("Your "+name+ " pizza is ready!"
                 + "\n"
                 +"Size: "+size
                 +"\n"
