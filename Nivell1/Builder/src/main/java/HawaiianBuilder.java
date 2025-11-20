@@ -1,25 +1,30 @@
-public class HawaiianBuilder implements PizzaBuilder{
-    private Pizza hawaiianPizza;
+import java.util.ArrayList;
 
-    public HawaiianBuilder(Pizza hawaiianPizza) {
-        this.hawaiianPizza = hawaiianPizza;
+public class HawaiianBuilder implements PizzaBuilder {
+    private double size;
+    private DoughType dough;
+    private ArrayList<String> toppings;
+
+
+    @Override
+    public void setSize(double size) {
+        this.size = size;
     }
 
     @Override
-    public void setSize() {
-        System.out.println("Setting size for hawaiian pizza");
-    }
-
-    @Override
-    public void setDough() {
-        System.out.println("Setting dough for hawaiian pizza");
+    public void setDough(DoughType dough) {
+        this.dough = dough;
 
     }
 
     @Override
-    public void setToppings() {
-        System.out.println("Adding toppings to hawaiian pizza");
-        this.hawaiianPizza.
+    public void setToppings(ArrayList<String> toppings) {
+        this.toppings = toppings;
 
+    }
+
+    @Override
+    public Pizza getPizzaDone() {
+        return new Pizza(size, dough,toppings);
     }
 }
