@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Builder implements PizzaBuilder {
     private double size;
     private DoughType dough;
-    private ArrayList<String> toppings;
+    private Ingredients toppings;
 
 
     @Override
@@ -18,7 +18,7 @@ public class Builder implements PizzaBuilder {
     }
 
     @Override
-    public void setToppings(ArrayList<String> toppings) {
+    public void setToppings(Ingredients toppings) {
         this.toppings = toppings;
 
     }

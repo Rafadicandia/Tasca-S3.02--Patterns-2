@@ -2,20 +2,16 @@ import java.util.ArrayList;
 
 public class MestrePizzer {
 
-    public void builderHawaiianPizza(Builder builder){
+    public void builderMargarita(Builder builder){
         builder.setSize(30);
         builder.setDough(DoughType.REGULAR);
-        builder.setToppings();
+        builder.setToppings(Ingredients.MARGARITA);
     }
 
-//hawaiana
-@Override
-public void setToppings() {
-
-    System.out.println("Adding toppings to hawaiian pizza");
-    for (String s : topping) {
-        System.out.println(s);
-
+    public void builderPepperoni(Builder builder){
+        builder.setSize(40.6);
+        builder.setDough(DoughType.NAPOLITAN);
+        builder.setToppings(Ingredients.PEPPERONI);
     }
-}
+
 }
