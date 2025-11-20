@@ -4,7 +4,6 @@ public class Builder implements PizzaBuilder {
     private DoughType dough;
     private Ingredients toppings;
 
-
     @Override
     public void setName(String name) {
         this.name = name;
