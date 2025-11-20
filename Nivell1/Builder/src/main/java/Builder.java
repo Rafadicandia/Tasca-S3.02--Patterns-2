@@ -1,11 +1,15 @@
 import java.util.ArrayList;
 
 public class Builder implements PizzaBuilder {
+    private String name;
     private double size;
     private DoughType dough;
     private Ingredients toppings;
 
-
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
     @Override
     public void setSize(double size) {
         this.size = size;
@@ -25,6 +29,15 @@ public class Builder implements PizzaBuilder {
 
     @Override
     public Pizza getPizzaDone() {
-        return new Pizza(size, dough,toppings);
+        System.out.println("Your Pizza is ready!"
+                + "\n"
+                +"Size: "+size
+                +"\n"
+                +"Dough: "+dough
+                +"\n"
+                +"Toppings: "+toppings.getIngredients()
+        );
+        return new Pizza(name, size, dough,toppings);
+
     }
 }
