@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class HawaiianBuilder implements PizzaBuilder {
+public class Builder implements PizzaBuilder {
     private double size;
     private DoughType dough;
     private ArrayList<String> toppings;
