@@ -10,4 +10,8 @@ public class Agency implements EventListener {
         System.out.println(name + " agency just received this stock update: " + message);
 
     }
+
+    public String getName() {
+        return name;
+    }
 }
