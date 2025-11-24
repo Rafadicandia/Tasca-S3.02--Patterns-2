@@ -1,8 +1,8 @@
-public class Store implements CallBack{
+public class Store implements CallBack {
     private String name;
 
     public Store(String name) {
-        if (name == null || name.isBlank()){
+        if (name == null || name.isBlank()) {
             throw new RuntimeException("Name can't be empty");
         }
         this.name = name;
