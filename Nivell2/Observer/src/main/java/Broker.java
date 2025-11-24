@@ -22,8 +22,8 @@ public class Broker {
         users.remove(listener);
     }
 
-    public void notify(String message) {
-        List<EventListener> users = subscribers.get(message);
+    public void notifyUpdate(String eventType, String message) {
+        List<EventListener> users = subscribers.get(eventType);
         for (EventListener listener : users) {
             listener.updateStock(message);
         }
