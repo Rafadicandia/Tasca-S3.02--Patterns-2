@@ -2,6 +2,9 @@ public class Bizum extends Payment {
     private String number;
 
     public Bizum(String number) {
+        if(number==null || number.isBlank()){
+            throw new RuntimeException("You must set a number in order to pay by Bizum");
+        }
         this.number = number;
     }
 
