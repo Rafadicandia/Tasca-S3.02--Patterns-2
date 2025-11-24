@@ -1,7 +1,12 @@
-public class Store {
+public class Store implements CallBack{
     private String name;
 
-    public static void main(String[] args) {
+    public Store(String name) {
+        this.name = name;
+    }
 
+    @Override
+    public void call() {
+        System.out.println("✅ [Store: " + this.name + "] Callback received.");
     }
 }
