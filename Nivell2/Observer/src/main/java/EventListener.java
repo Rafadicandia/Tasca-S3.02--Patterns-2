@@ -1,3 +1,3 @@
 public interface EventListener {
-    public void sendNotification(String message);
+    public void updateStock(String message);
 }

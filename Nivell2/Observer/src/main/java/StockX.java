@@ -1,25 +1,27 @@
 public class StockX {
     private int value;
-    private Broker info;
+    private boolean up;
 
-    public StockX(int value, Broker info) {
+
+
+    public StockX(int value) {
         this.value = value;
-        this.info = info;
+
     }
 
     public int getValue() {
         return value;
     }
 
-    private void setValue(int value) {
-        this.value = value;
+    private void setValue(int newValue) {
+        int prevVal = getValue();
+        if(prevVal>=newValue){
+            this.value = newValue;
+            up=false;
+        }else{
+            this.value = newValue;
+            up=true;
+        }
     }
 
-    public Broker getInfo() {
-        return info;
-    }
-
-    private void setInfo(Broker info) {
-        this.info = info;
-    }
 }
