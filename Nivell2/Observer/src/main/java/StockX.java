@@ -2,8 +2,6 @@ public class StockX {
     private int value;
     private boolean up;
 
-
-
     public StockX(int value) {
         this.value = value;
 
@@ -15,12 +13,12 @@ public class StockX {
 
     private void setValue(int newValue) {
         int prevVal = getValue();
-        if(prevVal>=newValue){
+        if (prevVal >= newValue) {
             this.value = newValue;
-            up=false;
-        }else{
+            up = false;
+        } else {
             this.value = newValue;
-            up=true;
+            up = true;
         }
     }
 
